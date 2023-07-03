@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="dropdownmenu">
+        <ul>
+            <li><a href="/registro">Registro</a></li>
+            <li><a href="/cliente">Listar Cliente</a></li>
+            <li><a href="/cursoR">Registrar Curso</a></li>
+            <li><a href="/curso">Listar Curso</a></li>
+            <li><a href="/inscripcionR">Inscripcion</a></li>
+            <li><a href="/inscripcion">Listar Inscripcion</a></li>
+        </ul>
+    </nav>
+    <br>
+    <form action="" method="post">
+        <h1>Registro Curso</h1>
+        <label for="">Nombre:</label>
+        <input type="text" [(ngModel)]="cursos.nombre" name="cedula" >
+        <label for="">Descripcion:</label>
+        <input type="text"  [(ngModel)]="cursos.descripcion" name="nombre">
+        <label for="">Precio:</label>
+        <input type="number" [(ngModel)]="cursos.precio" name="apellido">
+        <input type="submit" name="submit" (click)="crearCurso()">
+      </form>
+</body>
+</html>

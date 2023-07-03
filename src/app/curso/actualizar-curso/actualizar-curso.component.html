@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <form action="" method="post">
+        <h1>Actualizar Curso</h1>
+        <label for="">Nombre:</label>
+        <input type="text"  name="cedula" [(ngModel)]="cursos.nombre">
+        <label for="">Descripcion:</label>
+        <input type="text"   name="nombre" [(ngModel)]="cursos.descripcion">
+        <label for="">Precio:</label>
+        <input type="text"  name="apellido" [(ngModel)]="cursos.precio">
+        <input type="submit" name="submit" (click)="update()">
+      </form>
+</body>
+</html>

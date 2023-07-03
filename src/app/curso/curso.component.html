@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="dropdownmenu">
+        <ul>
+            <li><a href="/registro">Registro</a></li>
+            <li><a href="/cliente">Listar Cliente</a></li>
+            <li><a href="/cursoR">Registrar Curso</a></li>
+            <li><a href="/curso">Listar Curso</a></li>
+            <li><a href="/inscripcionR">Inscripcion</a></li>
+            <li><a href="/inscripcion">Listar Inscripcion</a></li>
+        </ul>
+    </nav>
+    <br>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Editar</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr *ngFor="let curso of cursos">
+            <th scope="row">{{curso.id}}</th>
+            <td>{{curso.nombre}}</td>
+            <td>{{curso.descripcion}}</td>
+            <td>{{curso.precio}}</td>
+            <td><button type="button" name="button" class="btn btn-primary" [routerLink]="['/actualizarCur',curso.id]">Editar</button></td>
+            <td><button type="button" class="btn btn-danger" (click)="delete(curso)">Eliminar</button></td>
+          </tr>
+        </tbody>
+      </table>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<nav class="dropdownmenu">
+  <ul>
+      <li><a href="/registro">Registro</a></li>
+      <li><a href="/cliente">Listar Cliente</a></li>
+    
+  </ul>
+</nav>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Cedula</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Direccion</th>
+        <th scope="col">Correo</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr *ngFor="let cliente of clientes">
+        <th scope="row">{{cliente.id}}</th>
+        <td>{{cliente.cedula}}</td>
+        <td>{{cliente.nombre}}</td>
+        <td>{{cliente.apellido}}</td>
+        <td>{{cliente.direccion}}</td>
+        <td>{{cliente.correo}}</td>
+      
+      </tr>
+    </tbody>
+  </table>

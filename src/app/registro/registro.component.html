@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="dropdownmenu">
+        <ul>
+            <li><a href="/registro">Registro</a></li>
+            <li><a href="/cliente">Listar Cliente</a></li>
+        </ul>
+    </nav>
+    <br>
+    <form action="" method="post">
+        <h1>Registro Cliente</h1>
+        <label for="">Cedula:</label>
+        <input type="text" [(ngModel)]="clientes.cedula" name="cedula" >
+        <label for="">Nombre:</label>
+        <input type="text"  [(ngModel)]="clientes.nombre" name="nombre">
+        <label for="">Apellido:</label>
+        <input type="text" [(ngModel)]="clientes.apellido" name="apellido">
+        <label for="">Telefono:</label>
+        <input type="number" [(ngModel)]="clientes.telefono" name="telefono">
+        <label for="">Direccion:</label>
+        <input type="text" [(ngModel)]="clientes.direccion" name="direccion">
+        <label for="">Correo:</label>
+        <input type="text" [(ngModel)]="clientes.correo" name="correo">
+        <input type="submit" name="submit" (click)="crearUsuario()">
+      </form>
+</body>
+</html>
