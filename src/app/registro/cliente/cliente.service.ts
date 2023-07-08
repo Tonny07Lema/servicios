@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ClienteService {
-  private url:string ="http://localhost:8080/persona"
+  private url:string ="http://172.173.210.89:8080/persona"
   constructor(private http:HttpClient) { }
 
   get(id:number):Observable<Cliente[]>{
